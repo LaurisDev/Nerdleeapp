@@ -1,5 +1,7 @@
+
 import subprocess
 import tkinter as tk
+
 
 ventana = tk.Tk()
 ventana.title("NERDLE")
@@ -132,14 +134,13 @@ boton_ingresar.grid(row=fila_boton_ingresar, column=columna_boton_ingresar, padx
 # Función para abrir el otro programa
 def abrir_intrucciones():
     try:
-        subprocess.Popen(["python", "ui.intrucciones.py"])
+        subprocess.Popen(["python", "ui_intrucciones.py"])
     except FileNotFoundError:
         print("El archivo del otro programa no se encuentra.")
 
 
 boton_intrucciones = tk.Button(ventana, text=" Ver instrucciones", command=abrir_intrucciones)
 boton_intrucciones.pack()
-
 
 ventana.mainloop()
 

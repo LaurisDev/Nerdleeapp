@@ -5,8 +5,8 @@ ventana = tk.Tk()
 ventana.title("Instrucciones")
 
 # Tamaño de la ventana
-ancho = 1400
-alto = 1400
+ancho = 900
+alto = 850
 
 # Crear un lienzo con un fondo degradado vertical
 lienzo = tk.Canvas(ventana, width=ancho, height=alto)

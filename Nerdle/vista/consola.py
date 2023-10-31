@@ -75,6 +75,7 @@ class UIConsola:
         self.nerdle.iniciar_juego()
         print(f"La ecuacion generada es: = {self.ecuacion.generar_ecuacion()}")
 
+
     def ver_estadisticas(self):
         pass
 
