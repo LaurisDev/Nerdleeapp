@@ -7,7 +7,7 @@ from Nerdle.modelo.estadisticas import Estadisticas
 @dataclass
 class Jugador:
     nombre_jugador: str = ""
-    correo_jugador: str = ""
+    contraseña: str = ""
 
 
 class Nerdle(Ecuacion):
@@ -15,7 +15,7 @@ class Nerdle(Ecuacion):
         super().__init__()
         self.retroalimentacion = None
         self.nombre_jugador: str = ""
-        self.correo_jugador: str = ""
+        self.contraseña: str = ""
         self.intentos: int = 6
         self.estadisticas: Estadisticas = Estadisticas()
 
@@ -23,9 +23,9 @@ class Nerdle(Ecuacion):
         self.nombre_jugador = nombre_jugador
         return self.nombre_jugador
 
-    def registrar_correo_jugador(self, correo_jugador: str) -> str:
-        self.correo_jugador = correo_jugador
-        return self.correo_jugador
+    def registrar_correo_jugador(self, contraseña: str) -> str:
+        self.contraseñar = contraseña
+        return self.contraseña
 
     """ Se borra el metodo juego nuevo pues no necesitamos mostrar la tabla por consola"""
 
