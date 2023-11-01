@@ -1,6 +1,8 @@
 import subprocess
 import tkinter as tk
 from tkinter import messagebox
+from Nerdle.modelo.estadisticas import Estadisticas
+
 
 ventana_principal = tk.Tk()
 
@@ -30,13 +32,15 @@ boton_intrucciones.grid(row=2, column=1, padx=10)
 
 
 def ver_estadistica():
+    estadisticas = Estadisticas()
+    fig = estadisticas.crear_grafica()
     try:
         subprocess.Popen(["python", "ui_estadisticas.py"])
     except FileNotFoundError:
         print("El archivo no se encuentra")
 
 
-boton_estadistica = tk.Button(ventana_principal, text="ESTADISTICA", command=ver_estadistica, bg="#6EF592", fg="white")
+boton_estadistica = tk.Button(ventana_principal, text="ESTADÍSTICAS", command=ver_estadistica, bg="#6EF592", fg="white")
 boton_estadistica.grid(row=2, column=2, padx=10)
 
 
